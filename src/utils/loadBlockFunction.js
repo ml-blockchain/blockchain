@@ -4,6 +4,4 @@ const readFile = path => global.block;
 const parseJson = data => JSON.parse(data);
 
 export default (path = BLOCK_FILE_PATH + BLOCK_FILE_NAME) =>
-  new Promise(resolve => {
-    resolve(readFile(path).then(data => parseJson(data)));
-  });
+  resolve(readFile(path).then(data => parseJson(data)));

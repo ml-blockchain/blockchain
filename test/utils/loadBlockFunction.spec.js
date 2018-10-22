@@ -14,17 +14,7 @@ describe('loadBlockFunction()', () => {
 
   after(() => fsMock.restore());
 
-  it('should load the block', done => {
-    loadBlockFunction('path/to/dir/' + BLOCK_FILE_NAME)
-      .then(() => done())
-      .catch(e => console.log(e));
-  });
+  it('should load the block');
 
-  it('should fail to load a bad file', done => {
-    loadBlockFunction('path/to/sdir/badFile')
-      .then()
-      .catch(() => {
-        done();
-      });
-  });
+  it('should fail to load a bad file');
 });

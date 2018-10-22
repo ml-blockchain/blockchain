@@ -19,14 +19,7 @@ describe('saveFunction()', () => {
 
   after(() => mock.restore());
 
-  it('should find save a file', done => {
-    saveFunction(secondBlock).then(() => done());
-  });
+  it('should find save a file');
 
-  it('should fine the file', done => {
-    fs.readFile(BLOCK_FILE_NAME, function(err, data) {
-      assert.isTrue(String(data) === JSON.stringify(secondBlock));
-      done();
-    });
-  });
+  it('should fine the file');
 });

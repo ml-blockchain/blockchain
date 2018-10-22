@@ -1,7 +1,12 @@
-import { BLOCK_FILE_NAME, BLOCK_FILE_PATH } from '../lib/constants';
+import ErrorHandler from '../lib/ErrorHandler';
 
-const readFile = path => global.block;
+const readFile = () => global.block;
 const parseJson = data => JSON.parse(data);
 
-export default (path = BLOCK_FILE_PATH + BLOCK_FILE_NAME) =>
-  resolve(readFile(path).then(data => parseJson(data)));
+export default () => {
+  try {
+    parseJson(readFile());
+  } catch (e) {
+    ErrorHandler.loadBlock(e);
+  }
+};

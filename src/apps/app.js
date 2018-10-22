@@ -7,10 +7,10 @@ setAppName('app');
 
 let block;
 
-loadBlockFunction()
-  .then(data => {
-    block = data;
-    output('block loaded successfully');
-  })
-  .catch(e => ErrorHandler.loadBlock(e))
-  .finally(() => startDoingBlockWork(block));
+try {
+  block = loadBlockFunction();
+} catch (e) {
+  ErrorHandler.initBlock(e);
+} finally {
+  startDoingBlockWork(block);
+}

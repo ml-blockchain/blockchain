@@ -1,6 +1,6 @@
 import publicKeyVerifier from '../../src/utils/crypto/publicKeyVerifier';
 import chai from 'chai';
-import {testPublicKey} from "../keys";
+import {testPublicKey} from "../helpers/keys";
 
 const assert = chai.assert;
 

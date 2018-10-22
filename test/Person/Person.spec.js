@@ -1,6 +1,6 @@
 import chai from 'chai';
 import Person from '../../src/classes/Person/Person.class';
-import { testPublicKey, testPublicKey2 } from '../keys';
+import { testPublicKey, testPublicKey2 } from '../helpers/keys';
 import { INITIAL_POINTS } from '../../src/lib/constants';
 
 const assert = chai.assert;

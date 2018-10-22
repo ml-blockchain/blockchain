@@ -1,3 +1,4 @@
 import Person from "./classes/Person/AbstractPerson.class";
 
-new  Person('12');
+new Person('12');
+

@@ -1,7 +1,7 @@
 import chai from 'chai';
 import Block from '../../src/classes/Block/Block.class';
 import FirstBlock from '../../src/classes/Block/FirstBlock.class';
-import { testPublicKey } from '../keys';
+import { testPublicKey } from '../helpers/keys';
 import Person from '../../src/classes/Person/AbstractPerson.class';
 import BlockOperations from '../../src/classes/Block/BlockOperations.class';
 
@@ -40,7 +40,7 @@ describe('Block class', () => {
   });
 
   describe('forth block', () => {
-    before(() => (forthBlock = new Block(thirdBlock)), 'create second block');
+    before(() => (forthBlock = new Block(thirdBlock)));
     it('should have one person in the list', () =>
       assert.isTrue(forthBlock.people.length === 1));
   });

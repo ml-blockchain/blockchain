@@ -1,6 +1,7 @@
 import AbstractPerson from './AbstractPerson.class';
 import ErrorHandler from '../../lib/ErrorHandler';
 import verifyNewFriend from '../../utils/verifiers/verifyNewFriend';
+
 class Person extends AbstractPerson {
   constructor(publicKey) {
     super(publicKey);

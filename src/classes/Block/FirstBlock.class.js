@@ -1,7 +1,11 @@
 import hashFunction from '../../utils/crypto/hashFunction';
 
 class FirstBlock {
-  constructor() {}
+  constructor() {
+    this._people = [];
+    this._hash = hashFunction('first block');
+    this._acceptedArticles = [];
+  }
 
   get people() {
     return [];
@@ -15,9 +19,9 @@ class FirstBlock {
     return [];
   }
 
-	print() {
-		console.log("I'm the first block!");
-	}
+  print() {
+    console.log("I'm the first block!");
+  }
 }
 
 export default FirstBlock;

@@ -2,12 +2,11 @@ import verifyNewPerson from '../../utils/verifiers/verifyNewPerson';
 import ErrorHandler from '../../lib/ErrorHandler';
 import verifyNewArticle from '../../utils/verifiers/verifyNewArticle';
 import hashFunction from '../../utils/crypto/hashFunction';
-import AbstractBlock from "./AbstractBlock.class";
+import AbstractBlock from './AbstractBlock.class';
 
-
-class Block extends AbstractBlock{
+class Block extends AbstractBlock {
   constructor(parentBlock) {
-  	super(parentBlock);
+    super(parentBlock);
   }
 
   addPerson(person) {

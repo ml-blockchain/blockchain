@@ -1,10 +1,10 @@
-import mock from 'mock-fs';
-import { BLOCK_FILE_NAME, BLOCK_FILE_PATH } from '../../src/lib/constants';
+import fsMock from 'mock-fs';
+import { BLOCK_FILE_NAME } from '../../src/lib/constants';
 import loadBlockFunction from '../../src/utils/loadBlockFunction';
 
 describe('loadBlockFunction()', () => {
   before(() =>
-    mock({
+    fsMock({
       'path/to/dir': {
         [BLOCK_FILE_NAME]: '{}',
         badFile: '{1}'
@@ -12,7 +12,7 @@ describe('loadBlockFunction()', () => {
     })
   );
 
-  after(() => mock.restore());
+  after(() => fsMock.restore());
 
   it('should load the block', done => {
     loadBlockFunction('path/to/dir/' + BLOCK_FILE_NAME)

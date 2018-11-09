@@ -1,0 +1,25 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "webpack": "^4.22.0"
+  },
+  "devDependencies": {
+    "webpack-shell-plugin": "^0.5.0"
+  }
+}
